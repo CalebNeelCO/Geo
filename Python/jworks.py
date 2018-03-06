@@ -38,19 +38,39 @@ def saveData(data, file='data/Tags.json'):
 	f.write(str(printTags(data)))	
 	f.close()
 
-class geo():
-	def __init__(self, tag, descrption, creator, date, found, cache):
- 		print ""
+def tagToClass():
 
- 		
-	def formatTag():
+def Gettag():
+
+class geo:
+    def __init__(self,tag, descrption, creator, date, found, cache):
+        self.tag = tag
+        self.descrption = descrption
+        self.creator = creator
+        self.date = date
+        self.found = found
+        self.cache = cache
+
+    def formatTag(self):
 		data = {}  
-		data[tag] = []  
-		data[tag].append({  
-	    'description': descrption,
-	    'creator': 'creator',
-	    'date': date,
-	    'found': found,
-	    'cache': cache
+		data[self.tag] = []  
+		data[self.tag].append({  
+	    'description': self.descrption,
+	    'creator': self.creator,
+	    'date': self.date,
+	    'found': self.found,
+	    'cache': self.cache
 		})
 		return data
+	def tag(self):
+		return self.tag
+	def descrption(self):
+		return self.descrption
+	def creator(self):
+		return self.creator
+	def date(self):
+		return self.date
+	def found(self):
+		return self.found
+	def cache(self):
+		return self.cache
