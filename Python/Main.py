@@ -2,23 +2,16 @@ from flask import Flask
 import json
 import jworks
 
-data = {}  
-data['people'] = []  
-data['people'].append({  
-    'name': 'Scott',
-    'website': 'stackabuse.com',
-    'from': 'Nebraska'
-})
-data['people'].append({  
-    'name': 'Larry',
-    'website': 'google.com',
-    'from': 'Michigan'
-})
-data['people'].append({  
-    'name': 'Tim',
-    'website': 'apple.com',
-    'from': 'Alabama'
-})
+
+
+
+yes = {}
+yes = {  
+    'Tag': 'abc',
+    'Value': 'asfasdf',
+    'Times called': 'Nebraska'
+}
+jworks.appendTag(yes)
 
 app = Flask(__name__)
 
