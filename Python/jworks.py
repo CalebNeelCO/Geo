@@ -18,13 +18,15 @@ def printTags(data=readTags()):
 
 
 def appendTag(get, userName, tag, file='data/Tags.json'):
-
 	data = readTags(file)
+	x = 0
 	if(userName in data):
-		#if( in data[userName])
-		print data[userName][0]['uid']
-		data[userName].append(get)
-	else:
+		if(get == data[userName][0]):
+			if(get[tag][0]['uid'] == data[userName][0][tag][0]['uid']):
+				x = 1
+				data[userName].append(get) #replace
+		
+	if(x == 0):
 		data[userName] = []
 		data[userName].append(get)
 	saveData(data)
@@ -82,7 +84,7 @@ class geo:
 		})
 		return data
 	def save(self):
-		appendTag(self.formatTag(), "tip1", "tag") #fix this
+		appendTag(self.formatTag(), self.creator, self.tag) #fix this
 	def tag(self):
 		return self.tag
 	def descrption(self):

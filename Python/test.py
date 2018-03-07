@@ -14,7 +14,7 @@ yes = {
 #works.updateTag("caleb", "taco")
 
 #print jworks.newUid()
-p1 = jworks.tagToClass('taco', 'tag', jworks.Gettag('tip', 'tag'))
+p1 = jworks.tagToClass('taco1', 'tag1', jworks.Gettag('tip1', 'tag1'))
 print p1.save()
 
 #print(jworks.printTags())
