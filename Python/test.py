@@ -12,7 +12,9 @@ yes = {
 }
 #jworks.appendTag(yes, "test")
 #works.updateTag("caleb", "taco")
-p1 = jworks.tagToClass('taco', 'tag', jworks.Gettag('taco', 'tag'))
-print p1.formatTag()
+
+#print jworks.newUid()
+p1 = jworks.tagToClass('taco', 'tag', jworks.Gettag('tip', 'tag'))
+print p1.save()
 
 #print(jworks.printTags())
